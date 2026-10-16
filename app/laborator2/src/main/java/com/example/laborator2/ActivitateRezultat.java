@@ -37,7 +37,7 @@ public class ActivitateRezultat extends AppCompatActivity {
 
     public void IntoarceInActivitate(View view) {
         String altMesaj="Mesaj nou";
-        int suma=this.nr2+this.nr2;
+        int suma=this.nr1+this.nr2;
 
         Intent it= new Intent();
         it.putExtra("altMesaj", altMesaj);

@@ -31,8 +31,8 @@ public class ActivitateNoua extends AppCompatActivity {
         Intent it=new Intent(this, ActivitateRezultat.class);
         Bundle bundle = new Bundle();
         bundle.putString("mesaj","Mesaj din prima activitate");
-        bundle.putInt("numar1",5);
-        bundle.putInt("numar2",7);
+        bundle.putInt("nr1",5);
+        bundle.putInt("nr2",7);
 
         it.putExtras(bundle);
 
@@ -45,7 +45,7 @@ public class ActivitateNoua extends AppCompatActivity {
 
         if (requestCode == 52) {
             if (resultCode == RESULT_OK) {
-                String mesaj=data.getStringExtra("altmesaj");
+                String mesaj=data.getStringExtra("altMesaj");
                 int suma=data.getIntExtra("suma",0);
                 StringBuilder builder=new StringBuilder();
                 builder.append(mesaj);
