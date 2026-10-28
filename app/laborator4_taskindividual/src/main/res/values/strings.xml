@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">laborator4_taskIndividual</string>
+    <string name="date_metrou">Date metrou</string>
+    <string name="id">ID</string>
+    <string name="ex_1">ex: 1</string>
+    <string name="model_locomotiva">Model locomotiva</string>
+    <string name="ex_bombardier_movia">ex: Bombardier Movia</string>
+    <string name="numar_vagoane">Numar vagoane</string>
+    <string name="ex_6">ex: 6</string>
+    <string name="numar_statii">Numar statii</string>
+    <string name="ex_14">ex: 14</string>
+    <string name="magistrala">Magistrala</string>
+    <string name="tip_traseu">Tip traseu</string>
+    <string name="subteran">Subteran</string>
+    <string name="suprateran">Suprateran</string>
+    <string name="mixt">Mixt</string>
+    <string name="grad_uzura">Grad uzura (5 stele = uzura maxima)</string>
+    <string name="aer_conditionat">Aer conditionat</string>
+    <string name="accesibil_persoanelor_cu_dizabilitati">Accesibil persoanelor cu dizabilitati</string>
+    <string name="salveaza">Salveaza</string>
+    <string name="adauga_metrou_design_simplu">Adauga metrou (design simplu)</string>
+    <string name="adauga_metrou_design_ai">Adauga metrou (design AI)</string>
+    <string name="niciun_metrou_adaugat_inca">Niciun metrou adaugat inca.</string>
+    <string-array name="magistrale">
+        <item>M1</item>
+        <item>M2</item>
+        <item>M3</item>
+        <item>M4</item>
+        <item>M5</item>
+    </string-array>
+</resources>
