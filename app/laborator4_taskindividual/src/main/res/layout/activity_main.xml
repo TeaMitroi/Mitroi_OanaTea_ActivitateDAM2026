@@ -18,6 +18,13 @@
         android:layout_marginTop="8dp"
         android:text="@string/adauga_metrou_design_ai" />
 
+    <Button
+        android:id="@+id/lista_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/lista_metrouri" />
+
     <TextView
         android:id="@+id/rezultat_TV"
         android:layout_width="match_parent"

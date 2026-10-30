@@ -101,16 +101,14 @@ public class Metrou implements Serializable {
 
     @Override
     public String toString() {
-        return "Metrou{" +
-                "id=" + id +
-                ", modelLocomotiva='" + modelLocomotiva + '\'' +
-                ", numarVagoane=" + numarVagoane +
-                ", numarStatii=" + numarStatii +
-                ", magistrala='" + magistrala + '\'' +
-                ", tipTraseu='" + tipTraseu + '\'' +
-                ", gradUzura=" + gradUzura + " /5" +
-                ", accesibilDizabilitati=" + (accesibilDizabilitati ? "Da" : "Nu") +
-                ", aerConditionat=" + aerConditionat +
-                '}';
+        return "Metrou Id: " + id +
+                "\n\t Model Locomotiva: " + modelLocomotiva +
+                "\n\t Numar Vagoane: " + numarVagoane +
+                "\n\t Numar Statii: " + numarStatii +
+                "\n\t Magistrala: " + magistrala +
+                "\n\t Tip Traseu: " + tipTraseu +
+                "\n\t Grad de Uzura: " + gradUzura + " /5" +
+                "\n\t Accesibil persoanelor cu dizabilitati: " + (accesibilDizabilitati ? "Da" : "Nu") +
+                "\n\t Aer Conditionat: " + aerConditionat;
     }
 }

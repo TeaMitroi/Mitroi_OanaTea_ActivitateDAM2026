@@ -21,6 +21,9 @@
     <string name="adauga_metrou_design_simplu">Adauga metrou (design simplu)</string>
     <string name="adauga_metrou_design_ai">Adauga metrou (design AI)</string>
     <string name="niciun_metrou_adaugat_inca">Niciun metrou adaugat inca.</string>
+    <string name="lista_metrouri">Lista metrouri</string>
+    <string name="lista_metrourilor_adaugate">Lista metrourilor adaugate</string>
+    <string name="metrou_sters">Metrou sters!</string>
     <string-array name="magistrale">
         <item>M1</item>
         <item>M2</item>
