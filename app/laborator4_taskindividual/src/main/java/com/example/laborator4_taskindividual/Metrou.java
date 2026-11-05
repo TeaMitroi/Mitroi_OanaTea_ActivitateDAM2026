@@ -1,10 +1,9 @@
 package com.example.laborator4_taskindividual;
 
-import android.widget.EditText;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-import java.io.Serializable;
-
-public class Metrou implements Serializable {
+public class Metrou implements Parcelable {
     private int id;
     private String modelLocomotiva;
     private int numarVagoane;
@@ -26,6 +25,48 @@ public class Metrou implements Serializable {
         this.accesibilDizabilitati = accesibilDizabilitati;
         this.aerConditionat = aerConditionat;
     }
+
+    protected Metrou(Parcel in) {
+        id = in.readInt();
+        modelLocomotiva = in.readString();
+        numarVagoane = in.readInt();
+        numarStatii = in.readInt();
+        magistrala = in.readString();
+        tipTraseu = in.readString();
+        gradUzura = in.readFloat();
+        accesibilDizabilitati = in.readByte() != 0;
+        aerConditionat = in.readByte() != 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(modelLocomotiva);
+        dest.writeInt(numarVagoane);
+        dest.writeInt(numarStatii);
+        dest.writeString(magistrala);
+        dest.writeString(tipTraseu);
+        dest.writeFloat(gradUzura);
+        dest.writeByte((byte) (accesibilDizabilitati ? 1 : 0));
+        dest.writeByte((byte) (aerConditionat ? 1 : 0));
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Metrou> CREATOR = new Creator<Metrou>() {
+        @Override
+        public Metrou createFromParcel(Parcel in) {
+            return new Metrou(in);
+        }
+
+        @Override
+        public Metrou[] newArray(int size) {
+            return new Metrou[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -109,6 +150,6 @@ public class Metrou implements Serializable {
                 "\n\t Tip Traseu: " + tipTraseu +
                 "\n\t Grad de Uzura: " + gradUzura + " /5" +
                 "\n\t Accesibil persoanelor cu dizabilitati: " + (accesibilDizabilitati ? "Da" : "Nu") +
-                "\n\t Aer Conditionat: " + aerConditionat;
+                "\n\t Aer Conditionat: " + (aerConditionat ? "Da" : "Nu");
     }
 }

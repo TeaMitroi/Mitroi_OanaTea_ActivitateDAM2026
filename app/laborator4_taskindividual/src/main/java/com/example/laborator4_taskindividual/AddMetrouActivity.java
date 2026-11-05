@@ -34,6 +34,19 @@ public class AddMetrouActivity extends AppCompatActivity {
         CompoundButton accesibil = findViewById(R.id.accesibil_SW);
         Button btnSalveaza = findViewById(R.id.salveaza_BTN);
 
+        Intent it = getIntent();
+        if(it.hasExtra("metrou")) {
+            Metrou primit = it.getParcelableExtra("metrou");
+            if(primit!= null){
+                id_ET.setText(String.valueOf(primit.getId()));
+                model_ET.setText(primit.getModelLocomotiva());
+                vagoane.setText(String.valueOf(primit.getNumarVagoane()));
+                statii.setText(String.valueOf(primit.getNumarStatii()));
+                selecteazaInSpinner(magistrala_SP,primit.getMagistrala());
+                btnSalveaza.setText(R.string.salveaza_modificarile);
+            }
+        }
+
         btnSalveaza.setOnClickListener(v -> {
             String idText = id_ET.getText().toString().trim();
             String model = model_ET.getText().toString().trim();
@@ -67,7 +80,7 @@ public class AddMetrouActivity extends AppCompatActivity {
                     uzura.getRating(), accesibil.isChecked(), aer.isChecked());
 
             Bundle bundle = new Bundle();
-            bundle.putSerializable("metrou", metrou);
+            bundle.putParcelable("metrou", metrou);
 
             Intent intent = new Intent();
             intent.putExtras(bundle);
@@ -75,4 +88,15 @@ public class AddMetrouActivity extends AppCompatActivity {
             finish();
         });
     }
+
+    private void selecteazaInSpinner(Spinner spinner,String valoare){
+        for (int i = 0; i < spinner.getAdapter().getCount(); i++) {
+            if(spinner.getAdapter().getItem(i).toString().equals(valoare)){
+                spinner.setSelection(i);
+                return;
+            }
+
+        }
+    }
 }
+

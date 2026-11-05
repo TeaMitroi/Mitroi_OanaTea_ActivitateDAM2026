@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 100 && resultCode == RESULT_OK && data != null) {
             Bundle bundle = data.getExtras();
             if (bundle != null) {
-                Metrou metrou = (Metrou) bundle.getSerializable("metrou");
+                Metrou metrou = (Metrou) bundle.getParcelable("metrou");
                 if (metrou != null) {
                     listaMetrouri.add(metrou);
                     Toast.makeText(this, "Metroul a fost adaugat in lista!", Toast.LENGTH_SHORT).show();
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundle = data.getExtras();
             if (bundle != null) {
                 ArrayList<Metrou> listaActualizata =
-                        (ArrayList<Metrou>) bundle.getSerializable("lista");
+                        bundle.getParcelableArrayList("lista");
                 if (listaActualizata != null) {
                     listaMetrouri = listaActualizata;
                 }
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent it=new Intent(getApplicationContext(), ListaMetrouri.class);
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("lista", listaMetrouri);
+                bundle.putParcelableArrayList("lista", listaMetrouri);
                 it.putExtras(bundle);
                 startActivityForResult(it,200);
             }
