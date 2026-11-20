@@ -25,6 +25,7 @@
     <string name="lista_metrourilor_adaugate">Lista metrourilor adaugate</string>
     <string name="metrou_sters">Metrou sters!</string>
     <string name="salveaza_modificarile">Salveaza modificarile</string>
+    <string name="lista_imagini">Lista imagini</string>
     <string-array name="magistrale">
         <item>M1</item>
         <item>M2</item>

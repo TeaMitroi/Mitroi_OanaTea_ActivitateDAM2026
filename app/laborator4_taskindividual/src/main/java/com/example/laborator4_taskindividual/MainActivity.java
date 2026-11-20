@@ -80,5 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(it,200);
             }
         });
+        Button btnImagini=findViewById(R.id.listaImagini_BTN);
+
+        btnImagini.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it=new Intent(getApplicationContext(), ListaImagini.class);
+                startActivity(it);
+            }
+        });
     }
 }
